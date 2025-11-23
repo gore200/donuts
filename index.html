@@ -13,15 +13,18 @@
         justify-content:center;
     }
     body {
+
         background-color:skyblue;
+
     }
     .donuts {
         display: flex;
         flex-direction: row;
 
         justify-content: center;
-        justify-content: space-around;
+
         height: 200px;
+        flex-wrap: wrap;
     }
     .donut {
         width: 200px;
@@ -29,20 +32,26 @@
         border-radius: 80px 80px 80px 80px;
         background-color: #8cdeff;
         transition: .2s;
+        margin: 10px;
     }
     .donut:hover{
         box-shadow: 5px 5px blue;
         background-color: #e0f0ff;
     }
-
+    .inputs {
+        display: flex;
+        justify-content: center;
+    }
 
 </style>
 <body>
     <h1>ПОНЧИКИ</h1>
-    <input class="inp1">
-    <button class="inp-commit1">Высота</button>
-    <input class="inp2">
-    <button class="inp-commit2">Количество</button>
+    <div class='inputs'>
+        <input class="inp1">
+        <button class="inp-commit1">Высота</button>
+        <input class="inp2">
+        <button class="inp-commit2">Количество</button>
+    </div>
     <div class='donuts'>
 
     </div>
