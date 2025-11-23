@@ -9,7 +9,7 @@
 <style>
     h1 {
         display:flex;
-        color: red;
+        color: rgb(0, 68, 255);
         justify-content:center;
     }
     body {
@@ -28,16 +28,11 @@
     }
     .donut {
         width: 200px;
-        border: 2px solid blue;
-        border-radius: 80px 80px 80px 80px;
-        background-color: #8cdeff;
+
         transition: .2s;
         margin: 10px;
     }
-    .donut:hover{
-        box-shadow: 5px 5px blue;
-        background-color: #e0f0ff;
-    }
+
     .inputs {
         display: flex;
         justify-content: center;
@@ -51,6 +46,7 @@
         <button class="inp-commit1">Высота</button>
         <input class="inp2">
         <button class="inp-commit2">Количество</button>
+        <button class="eat"></button>
     </div>
     <div class='donuts'>
 
@@ -64,6 +60,7 @@ let inp1 = document.querySelector('.inp1')
 let button1 = document.querySelector('.inp-commit1')
 let inp2 = document.querySelector('.inp2')
 let button2 = document.querySelector('.inp-commit2')
+let eat = document.querySelector('.eat')
 
 
 button1.addEventListener('click', function() {
@@ -74,6 +71,16 @@ button1.addEventListener('click', function() {
     })
 })
 
+eat.addEventListener('click', function() {
+    let donuts = document.querySelectorAll('.donut')
+    donuts.forEach(donut => {
+        donut.addEventListener('click', function() {
+            donut.style.display = 'none'
+        })
+    })
+})
+
+
 button2.addEventListener('click', function() {
     let val2 = inp2.value
     dnts.innerHTML = ``
@@ -82,9 +89,6 @@ button2.addEventListener('click', function() {
         dnts.innerHTML += `<img src='https://learn.algoritmika.org/uploads/2023/02/donut.png' class='donut'/>`
     }
 })
-
-
-
 
 
 </script>
