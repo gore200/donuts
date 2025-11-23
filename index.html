@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Магазин пончиков</title>
+</head>
+<style>
+    h1 {
+        display:flex;
+        color: blue;
+        justify-content:center;
+    }
+    body {
+        background-color:skyblue;
+    }
+    .donuts {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        justify-content: space-around;
+        height: 200px;
+    }
+    .donut {
+        width: 200px;
+        border: 2px solid blue;
+        border-radius: 80px 80px 80px 80px;
+        background-color: #8cdeff;
+        transition: .2s;
+    }
+    .donut:hover{
+        box-shadow: 5px 5px blue;
+        background-color: #e0f0ff;
+    }
+
+</style>
+<body>
+    <h1>ПОНЧИКИ</h1>
+    
+    <div class='donuts'>
+        
+        <img src='https://learn.algoritmika.org/uploads/2023/02/donut.png' class='donut'/>
+        <img src='https://learn.algoritmika.org/uploads/2023/02/donut.png' class='donut'/>
+        <img src='https://learn.algoritmika.org/uploads/2023/02/donut.png' class='donut'/>
+    </div>
+
+</body>
+    <script src="./script.js"></script>
+</html>
